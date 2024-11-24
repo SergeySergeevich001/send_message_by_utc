@@ -1,7 +1,7 @@
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, TEXT, Boolean, ForeignKey
 
-from myproject.db_config import session, engine, Base
+from src.db_config import session, engine, Base
 
 
 # Определение моделей

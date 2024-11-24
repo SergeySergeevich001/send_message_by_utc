@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 
-from myproject.tasks import send_messages
+from src.tasks import send_messages
 
 
 def run(request):

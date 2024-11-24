@@ -1,12 +1,12 @@
 from celery import shared_task
 from datetime import datetime, timedelta, timezone
 
-from myproject.db_config import session
+from src.db_config import session
 
 
 @shared_task
 def send_messages(start_hour):
-    from myproject.models import Supplier, District, DistrictUtc
+    from src.models import Supplier, District, DistrictUtc
     from django.utils.timezone import now
     suppliers = list(filter(lambda a: not a.subscription_cancelled and not a.subscription_admin,
                             session.query(Supplier).all()))
